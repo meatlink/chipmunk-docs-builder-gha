@@ -2,5 +2,4 @@
 set -e
 set -u
 
-rake build
-PATH="${PATH}:/opt/mdbook" rake book
+PATH="${PATH}:/opt/mdbook" rake build
