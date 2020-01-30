@@ -11,6 +11,5 @@ RUN cargo install mdbook
 
 FROM scratch
 COPY --from=ruby / /
-COPY --from=rust /root/.cargo/bin/mdbook /opt/mdbook/
-COPY action.sh /action.sh
-ENTRYPOINT ["sh", "/action.sh"]
+COPY --from=rust /root/.cargo/bin/mdbook /usr/local/bin/
+ENTRYPOINT ["sh"]
